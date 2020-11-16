@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  As recommended by Google, we use a ConstraintLayout
+  as the root element
+  We add a padding all around using the padding attribute
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:padding="12dp"
+  tools:context=".AddUserActivity"
+  >
+  <!--
+  * We use the src attribute to set the image to display
+  * We use a Start and a End constraint in order to center
+  horizontally the imageView into the parent
+  * we use a chainStyle in order to display correctly
+  all widget through the height
+  -->
+
+  <!--
+  * We use the hint attribute to display the "Name" string
+  * The name string has been extracted into a dedicated file
+  * The width is "0dp" because the "match_parent" value cannot be
+  used with the constraintLayout
+  * We use the inputType attribute to display the best keyboard
+  to the user
+  *
+  -->
+  <EditText
+      android:id="@+id/name"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:hint="@string/name"
+      android:inputType="textPersonName"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!--
+  * We use the hint attribute to display the "Phone Number" string
+  * The name string has been extracted into a dedicated file
+  * The width is "0dp" because the "match_parent" value cannot be
+  used with the constraintLayout
+  * We use the inputType attribute to display the best keyboard
+  to the user
+  *
+  -->
+
+  <!--
+  * We use the hint attribute to display the "Address" string
+  * The name string has been extracted into a dedicated file
+  * The width is "0dp" because the "match_parent" value cannot be
+  used with the constraintLayout
+  * We use the inputType attribute to display the best keyboard
+  to the user
+  *
+  -->
+
+  <!--
+  * We use the hint attribute to display the "About me" string
+  * The name string has been extracted into a dedicated file
+  * The width is "0dp" because the "match_parent" value cannot be
+  used with the constraintLayout
+  * We use the inputType attribute to display the best keyboard
+  to the user
+  *
+  -->
+
+  <!--
+  * We use the backgroundTint attribute to change the default color
+  of the button
+  -->
+  <Button
+      android:id="@+id/save"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:backgroundTint="@color/colorPrimary"
+      android:text="@string/save"
+      android:textColor="@android:color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/name" />
+</androidx.constraintlayout.widget.ConstraintLayout>
